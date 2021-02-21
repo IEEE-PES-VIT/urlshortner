@@ -2,9 +2,9 @@
   "name": "url-shortner",
   "version": "1.0.0",
   "description": "url shortner app",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "devStart": "nodemon server.js"
+    "start": "node app.js"
   },
   "author": "",
   "license": "ISC",
