@@ -24,10 +24,22 @@ app.get('/', (req, res) => {
 })
 
 app.post('/shortUrls', async (req, res) => {
-    await ShortUrl.create({
-        full: req.body.fullurl
+    ShortUrl.findOne({full:req.body.fullurl},(err,post)=>{
+        if(post!=null){
+            if(!err){
+                res.redirect('/')
+            }else{
+                res.redirect('/')
+            }
+        }else{
+            const url = new ShortUrl({
+                full:req.body.fullurl
+            })
+            url.save().then(()=>{
+                res.redirect('/')
+            })
+        }
     })
-    res.redirect('/')
 });
 app.get('/:id', (req, res) => {
     ShortUrl.findOne({
@@ -46,5 +58,5 @@ app.get('/:id', (req, res) => {
 })
 
 app.listen(process.env.PORT || 3000, () => {
-    console.log('server started')
+    console.log('server started on port 3000')
 });
