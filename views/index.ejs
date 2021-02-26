@@ -4,37 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>url shortner</title>
 </head>
 <body>
-    <div class="my-1 mx-2">
-        <h1>URL SHRINKER</h1>
-        <Form action="/shortUrls" method="POST" class="my-4">
-            <label for="fullUrl" class="sr-only">URL</label>
-            <input type="url" name="fullurl" placeholder="URL" id="fullurl" class="form-control mr-2">
-            <button type="submit" class="btnm btn-success">Shrink</button>
-        </Form>
-        <table class="table table-striped table-responsive">
-            <thead>
-                <tr>
-                    <th>Full URL</th>
-                    <th>Short URL</th>
-                    <th>click</th>
-                </tr>
-            </thead>
-            <tbody>
-                <% shortUrls.forEach(function(shortUrl){  %>
-                    <tr>
-                        <td><a href="<%=shortUrl.full %>"><%=shortUrl.full%></a> </td>
-                        <td><a href="<%=shortUrl.short %>"><%=shortUrl.short%></a></td>
-                        <td><%=shortUrl.clicks%></td>
-                    </tr>
-                <% }) %>
-            </tbody>
-        </table>
+<top>
+
+    <div class="box1 navbar navbar-dark bg-dark">
+        <a href="https://www.ieeepesvit.tech/"><img class="ieeelogo"src="./photos/logo.jpg" alt="logo"></a>
+        <h1 class="strike">URL SHRINKER</h1>
+        <div class="socialx">
+
+            <a href="https://www.facebook.com/ieee.pes.vit/"><img class="social"src="./photos/fb1.jpg" alt="fblogo"></a>
+            <a href="https://www.instagram.com/ieeepcsvit/?hl=en"><img class="social"src="./photos/insta.jpg" alt="instalogo"></a>
+        </div>
+
     </div>
+</top>
+
+<div class="shortner">
+    <Form action="/shortUrls" method="POST" class="my-4">
+        <label for="fullUrl" class="sr-only">URL --</label>
+        <input type="url" name="fullurl" placeholder="URL..." id="fullurl" class="form-control mr-2">
+        <button type="submit" class="btnm btn-success">Shrink</button>
+    </Form>
+
+
+</div>
+<table class="table table-striped table-responsive">
+    <thead>
+    <tr>
+        <th class="first exp1">Full URL</th>
+        <th class="first exp2">Short URL</th>
+        <th class="second exp3">CLICK</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% shortUrls.forEach(function(shortUrl){  %>
+    <tr>
+        <td ><a href="<%=shortUrl.full %>"><%=shortUrl.full%></a> </td>
+        <td class="url1 "><a href="<%=shortUrl.short %>"><%=shortUrl.short%></a></td>
+        <td class="url2"><%=shortUrl.clicks%></td>
+    </tr>
+    <% }) %>
+    </tbody>
+</table>
 
 </body>
 </html>

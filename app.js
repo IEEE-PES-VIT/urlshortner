@@ -12,6 +12,7 @@ app.set('view engine', 'ejs')
 app.use(express.urlencoded({
     extended: false
 }))
+app.use(express.static('public'))
 
 app.get('/', (req, res) => {
     ShortUrl.find({}).then((shortUrls) => {
