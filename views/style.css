@@ -1,0 +1,145 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+/* navbar style  */
+.box1{
+    padding: 10px 46px;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.836);
+    
+}
+.social{
+    height: 19px;
+    width: 21px;
+    padding: 10px 10px;
+    
+}
+.socialx{
+    margin: 41px 127px;
+    margin-right: 0%;
+}
+.ieeelogo{
+    height: 109px;
+    width: 125px;
+    border: 1px solid  rgba(0, 0, 0, 0) ;
+    border-radius: 26px;
+    margin:  11px 61px;
+   
+
+}
+.box1 h1{
+    padding: 41px 281px;
+    font-family: 'Akaya Kanadaka', cursive;
+    font-size: 52px;
+    color: rgba(255, 255, 255, 0.918);
+    cursor: pointer;
+   
+
+   
+}
+.box1 h1:after{
+    content: '';
+    position: relative;
+    width: 0; height: 3px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: rgb(255, 204, 204);
+    transition: width 0.7s ease;
+    -webkit-transition: width 0.7s ease;
+  }
+  .box1 h1:hover:after{
+    width: 100%;
+    left: 0;
+    background: rgba(255, 190, 190, 0.658);
+  }
+
+.shortner{
+    margin: 45px 0px;
+    margin-bottom: 0%;
+    background-color: rgba(43, 38, 165, 0.705);
+    border-radius: 32px;
+
+}
+.shortner form{
+    padding: 33px 0px;
+}
+.shortner label{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0px 41px;
+    padding-right: 0px;
+}
+.shortner input{
+    height: 36px;
+    width: 764px;
+    margin-left: 15px;
+    border: 0.1px solid;
+    border-radius: 10px;
+}
+.shortner button{
+    height: 36px;
+    width: 126px;
+    background-color: #23c463d9;
+    border: 1px solid #000000d9;
+    border-radius: 22px;
+    margin-left: 31px;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+.shortner button:hover{
+    background-color:#9abea9;
+    color:  #000000d9;
+}
+
+table{
+    margin-top: 20px;
+    height: 100px;
+    width: 100%;
+}
+thead tr{
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+.first{
+    height: 32px;
+    width: 73px;
+    padding: 9px 18px;
+}
+.exp1{
+    position: absolute;
+}
+.exp2{
+    padding-left: 10px;
+    position: relative;
+    left: 583px;
+}
+.exp3{
+   
+    float: right;
+    position: relative;
+    top: 12px;
+
+   
+    
+}
+tbody{
+    height: 20px;
+    width: 100%;
+    border: 2px solid black;
+    background-color: rgba(240, 230, 140, 0.507);
+}
+.url1{
+    position: relative;
+    left: 570px;
+}
+.url2{
+    float: right;
+    position: relative;
+    top: 15px;
+
+}

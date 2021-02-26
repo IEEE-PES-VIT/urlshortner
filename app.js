@@ -2,7 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const ShortUrl = require('./models/shortUrl')
 const app = express()
-
+// const port=8000;
 mongoose.connect('mongodb://localhost:27017/urlsShortner', {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -46,5 +46,5 @@ app.get('/:id', (req, res) => {
 })
 
 app.listen(process.env.PORT || 3000, () => {
-    console.log('server started')
+    console.log(`server started `)
 });
