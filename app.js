@@ -12,6 +12,7 @@ app.set('view engine', 'ejs')
 app.use(express.urlencoded({
     extended: false
 }))
+
 app.use(express.static('public'))
 
 app.get('/', (req, res) => {
@@ -42,6 +43,7 @@ app.post('/shortUrls', async (req, res) => {
         }
     })
 });
+
 app.get('/:id', (req, res) => {
     ShortUrl.findOne({
         short: req.params.id
